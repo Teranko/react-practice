@@ -1,25 +1,38 @@
 import React from 'react';
-import './App.css';
+import InnerComponent from './InnerComponent.js'
+import Clock from './Clock.js'
 
-function App() {
+const list = [
+  {
+  title: 'React',
+  url: 'https://reactjs.org/',
+  author: 'Jordan Walke',
+  num_comments: 3,
+  points: 4,
+  objectID: 0,
+  }
+];
+
+class App extends React.Component {
+  constructor(props){
+    super(props);
+
+    this.state = {
+      list: list,
+    }
+  }
+
+render() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+    <Clock />
+
     </div>
   );
+}
+    
+  
+
 }
 
 export default App;
