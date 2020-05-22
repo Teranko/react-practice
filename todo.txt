@@ -1,0 +1,1 @@
+1) simple stopwatch with a start and stop buttons
